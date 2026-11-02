@@ -51,6 +51,11 @@ build/UITests/Results. No UI runtime pass is claimed. The Developer-ID-signed
 sandboxed self-test likewise exits with SIGTRAP before main. CI now runs the
 actual UI tests and retains results; remote success must be observed separately.
 
+The initial source commit was prepared locally. Its first push to the existing
+GitHub remote was rejected by the host's enterprise destination policy.
+No remote CI run exists. Repository approval must be resolved through the
+organization's security process; no alternative upload path was attempted.
+
 The offline capture audit reproduced 148/259/387/1,005 reviewed frames for
 sessions 001/003/004/005. These are coverage counts, not newly enabled specs.
 See OPERATION_EVIDENCE.md for the consolidated protocol coverage.

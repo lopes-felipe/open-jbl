@@ -53,6 +53,9 @@ Developer ID signing is not a promise that macOS will retain consent.
 The existing GitHub remote is `lopes-felipe/open-jbl`. CI supports
 `workflow_dispatch` once this workflow is pushed. No remote run, signing
 configuration or upload is implied by the checked-in workflow.
+The initial push is currently blocked by the host's enterprise destination
+policy. Resolve destination approval before uploading or dispatching CI;
+changing upload tools is not a substitute for that approval.
 
 ## Release gate and distribution
 

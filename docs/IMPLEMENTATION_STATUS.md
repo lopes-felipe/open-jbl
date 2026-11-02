@@ -71,7 +71,7 @@ agent host; historical checks below retain their original attribution.
 
 | Milestone | Status | Missing exit evidence |
 | --- | --- | --- |
-| M0 | Implemented; local checks in handoff | GitHub CI must run; not claimed remotely green |
+| M0 | Implemented; local software checks pass | Initial push blocked by host destination policy; GitHub CI has not run |
 | M1 | Active from 2026-11-02; fixed deadline 2026-11-16 18:30 CET | Action mapping, frozen inventory, sandboxed transport/identity/telemetry/reversible-change proof |
 | M2 | Session/discovery integrated; final offline review in progress | Actual reconnect/timing, cancellation and workflow hardware evidence; M1 A/B |
 | M3 | Snapshot-driven feature UI under integration; unverified controls disabled | Captured hardware-verified drivers for all required actions |
