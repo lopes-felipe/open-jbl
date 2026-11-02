@@ -1,0 +1,13 @@
+# provenance: user's official-app capture session-003.pklg; SHA-256 recorded in private research/log.md; packets 1876/1881/1888 and 1970/1973/1987
+# app: JBL Headphones 5.38.3; Germany App Store; user-reported
+# firmware: earbuds 6.0.1; case 5.7.0; user-reported, not decoded from trace
+# hardware: iPhone ANC -> Ambient -> ANC audible per user; Mac transport/identity/control pending
+# scope: passive evidence only; no operation enabled; trailing setting fields remain opaque
+# ANC -> Ambient: command, same-ID reply, then observed mode report
+> 05 5A 06 00 06 0E 00 0A 0A 04
+< 05 5B 08 00 06 0E 00 0A 0A 04 00 00
+< 05 5D 08 00 01 09 05 00 00 0A 07 00
+# Ambient -> ANC: command, same-ID reply, then observed mode report
+> 05 5A 06 00 06 0E 00 0A 01 00
+< 05 5B 08 00 06 0E 00 0A 01 00 00 00
+< 05 5D 08 00 01 09 05 00 00 01 07 00

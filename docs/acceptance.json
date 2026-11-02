@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "m1Outcome": null,
+  "m1EvidenceReport": null,
+  "inventoryFrozen": false,
+  "requiredActions": [],
+  "checks": {
+    "noPairingOrPaging": false,
+    "unknownFirmwareReadOnly": false,
+    "boundedRecovery": false,
+    "diagnosticsRedacted": false,
+    "sandboxBluetoothVerified": false,
+    "macOS14CleanInstall": false,
+    "currentMacOSHardware": false,
+    "reconnectAndWake": false,
+    "batteryDrain": false,
+    "developerIDHardware": false,
+    "publishedGaps": false
+  }
+}

@@ -1,0 +1,13 @@
+# provenance: user's session-005.pklg; Ambient read 1333/1338, ANC change 1748/1749/1753, ANC read 2491/2505
+# app: JBL Headphones 5.38.3; Germany
+# firmware: earbuds 6.0.1; case 5.7.0
+# hardware: official app initialized in both modes; ANC audible; later sandboxed Mac Ambient profile proof passed, ANC change reply check failed despite audible ANC
+# scope: exact module-5 profiles; opaque suffix 07 00 06 in Ambient and 07 00 05 in ANC; no interpretation of final byte
+# Ambient response repeated at 1427 and 1683; ANC response repeated at 2589 and 2850
+> 05 5A 04 00 01 09 05 00
+< 05 5B 09 00 01 09 05 00 00 0A 07 00 06
+> 05 5A 06 00 06 0E 00 0A 01 00
+< 05 5B 08 00 06 0E 00 0A 01 00 00 00
+< 05 5D 08 00 01 09 05 00 00 01 07 00
+> 05 5A 04 00 01 09 05 00
+< 05 5B 09 00 01 09 05 00 00 01 07 00 05

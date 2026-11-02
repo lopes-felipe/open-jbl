@@ -1,0 +1,14 @@
+.build/
+.swiftpm/
+DerivedData/
+build/
+dist/
+research/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+*.p12
+*.p8
+*.pklg
+*.pcap*
+__pycache__/

@@ -1,0 +1,51 @@
+name: CI
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  capture-tools:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tshark
+        run: |
+          sudo apt-get update
+          sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y tshark
+      - name: Capture extraction regression tests
+        run: python3 -m unittest discover -s Tests/ScriptTests -v
+  verify:
+    runs-on: macos-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+      - name: Offline checks
+        run: scripts/check-fast.sh
+      - name: Offline probe catalog
+        run: |
+          swift build
+          codesign --force --sign - .build/debug/jbl-probe
+          .build/debug/jbl-probe list
+      - name: Universal app, relocated self-test and entitlements
+        env:
+          CI: 'true'
+        run: scripts/build-validation.sh --ci-ad-hoc
+      - name: Offline XCUITest runtime checks
+        run: scripts/check-ui.sh
+      - name: Retain XCUITest results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: offline-ui-results
+          path: build/UITests/Results/
+          if-no-files-found: ignore
+          retention-days: 7

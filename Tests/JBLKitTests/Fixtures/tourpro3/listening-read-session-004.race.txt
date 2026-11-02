@@ -1,0 +1,7 @@
+# provenance: user's session-004.pklg; packets 1270/1274, repeated at 1378/1382 and 1684/1685
+# app: JBL Headphones 5.38.3; Germany
+# firmware: earbuds 6.0.1; case 5.7.0
+# hardware: official-app read; sandboxed Mac read returned ANC on 2026-11-02; no setting change in that read test
+# scope: module 5 read; mode at payload offset 3; trailing three bytes preserved as opaque, not a status code
+> 05 5A 04 00 01 09 05 00
+< 05 5B 09 00 01 09 05 00 00 01 07 00 05
